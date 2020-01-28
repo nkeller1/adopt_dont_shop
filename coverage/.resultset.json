@@ -181,14 +181,32 @@
       "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/config/routes.rb": [
         1,
         null,
+        1,
         null
       ],
       "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/helpers/application_helper.rb": [
         1,
         null
       ],
+      "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/spec/models/shelter_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
       "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/models/shelter.rb": [
         1,
+        1,
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -196,8 +214,20 @@
         1,
         1,
         null
+      ],
+      "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/controllers/shelters_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1580227398
+    "timestamp": 1580233447
   }
 }
