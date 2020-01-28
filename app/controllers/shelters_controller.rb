@@ -4,8 +4,9 @@ class SheltersController < ApplicationController
 
   def index
     @shelters = Shelter.all
-    # ["Mike's Shelter", "Meg's Shelter"]
   end
 
-
+  def show
+    @shelter = Shelter.find(params[:id])
+  end
 end

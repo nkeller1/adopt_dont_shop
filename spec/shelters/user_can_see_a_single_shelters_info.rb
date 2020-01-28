@@ -9,19 +9,13 @@ RSpec.describe "shelters index page", type: :feature do
                          state: "CO",
                          zip: 80202
                        )
-    shelter_2 = Shelter.create(
-                          name: "Meg's Shelter",
-                          address: "150 Main Street",
-                          city: "Hershey",
-                          state: "PA",
-                          zip: 17033
-                        )
 
-    visit "/shelters"
+    visit "/shelters/:id"
 
     expect(page).to have_content(shelter_1.name)
-    expect(page).to have_link("Mike's Shelter")
-    expect(page).to have_content(shelter_2.name)
-    expect(page).to have_link("Meg's Shelter")
+    expect(page).to have_content(shelter_1.address)
+    expect(page).to have_content(shelter_1.city)
+    expect(page).to have_content(shelter_1.state)
+    expect(page).to have_content(shelter_1.zip)
   end
 end
