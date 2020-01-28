@@ -3,8 +3,8 @@
 class SheltersController < ApplicationController
 
   def index
-    @shelters = ["Mike's Shelter", "Meg's Shelter"]
-    # Shelter.all
+    @shelters = Shelter.all
+    # ["Mike's Shelter", "Meg's Shelter"]
   end
 
 
