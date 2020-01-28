@@ -6,6 +6,6 @@ RSpec.describe "welcome index page", type: :feature do
     visit "/"
 
     expect(page).to have_content("Adopt Don't Shop!")
-    expect(page).to have_link("/shelters")
+    expect(page).to have_link("Shelter List")
   end
 end
