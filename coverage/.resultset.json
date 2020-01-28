@@ -186,8 +186,18 @@
       "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/helpers/application_helper.rb": [
         1,
         null
+      ],
+      "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/models/shelter.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1580165412
+    "timestamp": 1580227398
   }
 }
