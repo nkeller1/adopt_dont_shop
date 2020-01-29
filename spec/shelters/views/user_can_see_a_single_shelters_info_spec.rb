@@ -17,7 +17,6 @@ RSpec.describe "shelter show page", type: :feature do
                          zip: 17033
                        )
 
-
     visit "/shelters/#{shelter_1.id}"
 
     expect(page).to have_content(shelter_1.name)
