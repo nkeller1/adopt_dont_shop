@@ -8,13 +8,9 @@ require "rails_helper"
                                     city: "Denver",
                                     state: "CO",
                                     zip: 80018)
-  
-        @shelter_2 = Shelter.create(name: "Aurora Shelter",
-                                    address: "800 Some Ave",
-                                    city: "Aurora",
-                                    state: "CO",
-                                    zip: 80249)
       end
+      it "can delete shelter" do
+
       visit "/shelters/#{@shelter_1.id}"
 
       expect(page).to have_link("Delete Shelter")
@@ -23,5 +19,6 @@ require "rails_helper"
 
       expect(current_path).to eq("/shelters")
       expect(page).to_not have_content(@shelter_1.name)  
+    end 
   end
 end
