@@ -14,7 +14,6 @@ class SheltersController < ApplicationController
   end
 
   def create
-    require "pry"; binding.pry
     shelter = Shelter.new({
       name: params[:shelter][:name],
       address: params[:shelter][:address],
