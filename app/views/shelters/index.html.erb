@@ -1,6 +1,18 @@
-<h1> Shelters </h1>
-<% @shelters.each do |shelter| %>
-<%= shelter.name %><br>
-<% end %>
 
-<%= link_to "New Shelter", "/shelters/new"  %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1> Shelters </h1>
+    <% @shelters.each do |shelter| %>
+      <%= shelter.name %><br>
+    <% end %>
+    <%= link_to "New Shelter", "/shelters/new"  %>
+  </body>
+</html>
