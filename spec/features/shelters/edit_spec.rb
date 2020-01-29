@@ -44,7 +44,7 @@ require "rails_helper"
       new_shelter = Shelter.last
 
       expect(page).to have_content(new_shelter.name)
-      expect
+      expect(page).to_not have_content(@shelter_1.name)
     end
   end
 end
