@@ -17,13 +17,13 @@ require "rails_helper"
       end
       it "can edit a shelter" do
       
-      visit "/shelters/#{shelter_1.id}"
+      visit "/shelters/#{@shelter_1.id}"
 
       expect(page).to have_link("Edit")
 
       click_link "Edit"
 
-      expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
+      expect(current_path).to eq("/shelters/#{@shelter_1.id}/edit")
 
       name = "Dino shelter"
       address = "2123 lake st."
@@ -44,6 +44,7 @@ require "rails_helper"
       new_shelter = Shelter.last
 
       expect(page).to have_content(new_shelter.name)
+      expect
     end
   end
 end
