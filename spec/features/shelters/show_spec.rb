@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "as a visitor" do
+RSpec.describe "as a visitor", type: :feature do
   describe "on show page" do 
     it "can see the that shelter and its information" do
       shelter = Shelter.create(         name: "Adopt Shop",
@@ -21,6 +21,7 @@ RSpec.describe "as a visitor" do
       expect(page).to have_content(shelter.city) 
       expect(page).to have_content(shelter.state)
       expect(page).to have_content(shelter.zip) 
+      expect(page).to_not have_content(shelter_2.name) 
     end
   end
 end

@@ -15,12 +15,36 @@ require "rails_helper"
                                     state: "CO",
                                     zip: 80249)
       end
-      it "can see the name of each shelter" do
-        visit "/shelters"
+      it "can edit a shelter" do
+      
+      visit "/shelters/#{shelter_1.id}"
 
-        expect(page).to have_content(@shelter_1.name)
-        expect(page).to have_content(@shelter_2.name)
-      end
+      expect(page).to have_link("Edit")
+
+      click_link "Edit"
+
+      expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
+
+      name = "Dino shelter"
+      address = "2123 lake st."
+      city = "Richmond"
+      state = "VA"
+      zip = "23143"
+
+      fill_in "Name", with: name
+      fill_in "Address", with: address
+      fill_in "City", with: city
+      fill_in "State", with: state
+      fill_in "Zip", with: zip
+
+      click_button "Update Shelter"
+
+      expect(current_path).to eq("/shelters")
+
+      new_shelter = Shelter.last
+
+      expect(page).to have_content(new_shelter.name)
+    end
   end
 end
 
