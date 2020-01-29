@@ -18,6 +18,14 @@ RSpec.describe "shelter new page", type: :feature do
     expect(page).to have_content("City")
     expect(page).to have_content("State")
     expect(page).to have_content("Zip")
-    expect(page).to have_button("Submit")
+    expect(page).to have_button{"Submit"}
+
+    expect(current_path).to eq('/shelters/new')
+
+    fill_in 'shelter[name]', with: "Nate's Shelter"
+    fill_in 'shelter[address]', with: "123 Bark Plaza"
+    fill_in 'shelter[city]', with: "Aurora"
+    fill_in 'shelter[state]', with: "CO"
+    fill_in 'shelter[zip]', with: 80014
   end
 end

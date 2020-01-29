@@ -2,7 +2,7 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-# Shelter.destroy_all
+Shelter.destroy_all
 shelter_1 = Shelter.create(
                      name: "Mike's Shelter",
                      address: "1331 17th Street",

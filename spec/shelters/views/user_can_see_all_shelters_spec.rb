@@ -23,6 +23,7 @@ RSpec.describe "shelters index page", type: :feature do
     expect(page).to have_link("Mike's Shelter")
     expect(page).to have_content(shelter_2.name)
     expect(page).to have_link("Meg's Shelter")
+    expect(page).to have_content("Create New Shelter")
     expect(page).to have_link("Create New Shelter")
   end
 end
