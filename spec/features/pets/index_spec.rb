@@ -18,12 +18,29 @@ RSpec.describe "on the index page", type: :feature do
       visit "/pets"
 
       within("#pet-#{@pet_1.id}") do
-        expect(page).to have_content
+        expect(page).to have_css("img[src*='#{@pet_1.image}']")
         expect(page).to have_content("Name: #{@pet_1.name}")
         expect(page).to have_content("Age: #{@pet_1.approximate_age}")
         expect(page).to have_content("Sex: #{@pet_1.sex}")
-        expect(page).to have_content("Current Shelter: #{@pet_1.shelter}")
+        expect(page).to have_content("Current Shelter: #{@pet_1.shelter.name}")
       end
+    end
+    it "can see all pets that belong to that shelter" do
+
+    visit "/shelters/#{@shelter_1.id}/pets"
+
+    expect(page).to have_content("Current Shelter: #{@shelter_1.name}")
+  
+    expect(page).to have_content(@shelter_1.name)
+    expect(page).to have_css("img[src*='#{@pet_1.image}']")
+    expect(page).to have_content("Name: #{@pet_1.name}")
+    expect(page).to have_content("Age: #{@pet_1.approximate_age}")
+    expect(page).to have_content("Sex: #{@pet_1.sex}")
+  
+    expect(page).to have_css("img[src*='#{@pet_2.image}']")
+    expect(page).to have_content("Name: #{@pet_2.name}")
+    expect(page).to have_content("Age: #{@pet_2.approximate_age}")
+    expect(page).to have_content("Sex: #{@pet_2.sex}")                             
     end
   end
 end
