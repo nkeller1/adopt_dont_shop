@@ -30,7 +30,7 @@ require "rails_helper"
 
       new_shelter = Shelter.last
 
-      expect(page).to have_content(new_shelter.name)
+      expect(page).to have_content("Dogo shelter")
     end
   end
 end
