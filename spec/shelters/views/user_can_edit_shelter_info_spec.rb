@@ -11,17 +11,10 @@ RSpec.describe "shelters edit page", type: :feature do
                        )
     visit "/shelters/#{shelter_1.id}/edit"
 
-    expect(page).to have_content("Edit Name")
-    expect(page).to have_content("Edit Address")
-    expect(page).to have_content("Edit City")
-    expect(page).to have_content("Edit State")
-    expect(page).to have_content("Edit Zip")
-    expect(page).to have_button{"Submit"}
-
-    fill_in 'shelter[name]', with: "Nate's Shelter"
-    fill_in 'shelter[address]', with: "123 Bark Plaza"
-    fill_in 'shelter[city]', with: "Aurora"
-    fill_in 'shelter[state]', with: "CO"
-    fill_in 'shelter[zip]', with: 80014
+    fill_in :name, with: "Nate's Shelter"
+    fill_in :address, with: "123 Bark Plaza"
+    fill_in :city, with: "Aurora"
+    fill_in :state, with: "CO"
+    fill_in :zip, with: 80014
   end
 end
