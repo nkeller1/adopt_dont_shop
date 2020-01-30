@@ -13,6 +13,13 @@ RSpec.describe "on the index page", type: :feature do
                                     approximate_age: 6000,
                                     sex: "F",
                                     shelter: @shelter_1)
+
+      @pet_2 = Pet.create(          image: "https://www.thoughtco.com/thmb/U7DKDGmDj_zH7Sqz5JYv6JPomQs=/640x603/filters:no_upscale():max_bytes(150000):strip_icc()/dinomeme5-56a256bb3df78cf772748c40.jpg",
+                                    name: "Taco",
+                                    approximate_age: 300,
+                                    sex: "M",
+                                    shelter: @shelter_1)
+                                    
     end
     it "can see all pets and its information" do
       visit "/pets"
