@@ -1,7 +1,7 @@
 
 require 'rails_helper'
 
-RSpec.describe "creating a new pet" do
+RSpec.describe "on the index page for pets" do
   it "can create a pet" do
     shelter = Shelter.create!(name: "Denver Adoption",
                               address: "1234 Colorado blvd.",
