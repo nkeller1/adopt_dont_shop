@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+  <h1>Create Pet</h1>
+<%= form_tag("/shelters/#{@shelter_id}/pets", method: :post) do %>
+  <p><%= label_tag :image %>
+  <%= text_field_tag :image %></p>
+  <p><%= label_tag :name %>
+  <%= text_field_tag :name %></p>
+  <p><%= label_tag :description %>
+  <%= text_field_tag :description %></p>
+  <p><%= label_tag :approximate_age %>
+  <%= number_field_tag :approximate_age %></p>
+  <p><%= label_tag :sex %>
+  <div class="sex-selector">
+  <select name="sex" id="sex" style="height: 40px !important;" >
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  </div>
+
+
+  <%= submit_tag "Add New Pet"%>
+<% end %>
+</div>
+</div>
