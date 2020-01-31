@@ -1,0 +1,66 @@
+header {
+  background: #000000;
+  display: flex;
+}
+
+body {
+  background-color: rgb(77, 76, 76);
+}
+
+button {
+  color: #fdc938;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-shadow: burlywood;
+}
+
+body {
+  font-family: 'Tangerine', serif;
+  font-size: 20px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.responsive {
+      padding: 0 6px;
+      float: center;
+      width: 24.99999%;
+}
+
+div.gallery img {
+
+        width: 100%;
+        height: auto;
+      }
+
+a {
+  color: aqua;
+}
+/*# sourceMappingURL=styles.css.map */
+/* line 4, /Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/assets/stylesheets/styles.scss */
+header {
+  background: #3f4553;
+}
+
+/* line 8, /Users/thunderwolf/turing/mod2_2/projects/adopt_dont_shop/app/assets/stylesheets/styles.scss */
+button {
+  color: #fdc938;
+}
+/* No CSS *//*# sourceMappingURL=welcome.css.map */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

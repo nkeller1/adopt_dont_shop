@@ -1,9 +1,11 @@
 <center>
-<h1> <%= @shelter.name %></h1>
+<div class="container">
+<h1><%= link_to @shelter.name, "/shelters/#{@shelter.id}" %></title>
 <p><%= @shelter.address %></p>
 <p><%= @shelter.city %></p>
 <p><%= @shelter.state  %></p>
 <p><%= @shelter.zip %></p>
 <%= link_to "Edit", "/shelters/#{@shelter.id}/edit" %>
 <%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
+</div>
 </center>
