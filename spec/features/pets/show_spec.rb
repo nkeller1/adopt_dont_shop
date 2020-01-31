@@ -7,7 +7,7 @@ RSpec.describe "as a visitor", type: :feature do
                                     address: "123 fake st.",
                                     city: "Denver",
                                     state: "CO",
-                                    zip: 80018)
+                                    zip: "80018")
       @pet_1 = Pet.create(          image: "https://images.theconversation.com/files/291243/original/file-20190906-175705-cjptgw.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip",
                                     name: "Lucii",
                                     approximate_age: 6000,
@@ -24,11 +24,11 @@ RSpec.describe "as a visitor", type: :feature do
     it "can see the that pet and its information" do
       visit "/pets/#{@pet_1.id}"
 
-      expect(page).to have_css(@pet_1.image) 
+      expect(page).to have_css("img[src*='#{@pet_1.image}']") 
       expect(page).to have_content(@pet_1.name) 
       expect(page).to have_content(@pet_1.approximate_age) 
       expect(page).to have_content(@pet_1.sex)
-      expext(page).to have_content(@pet_1.adoptable)
+      expect(page).to have_content(@pet_1.adoptable)
     end
   end
 end

@@ -7,12 +7,12 @@ RSpec.describe "as a visitor", type: :feature do
                                         address: "123 Fake",
                                         city: "New York City",
                                         state: "NY",
-                                        zip: 90123)
+                                        zip: "90123")
       shelter_2 = Shelter.create(       name: "Some Shelter",
                                         address: "Some Address",
                                         city: "Some City",
                                         state: "Some State",
-                                        zip: 00000)
+                                        zip: "00000")
 
       visit "/shelters/#{shelter.id}"
 
