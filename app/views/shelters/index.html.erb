@@ -9,12 +9,12 @@
   </head>
   <body>
   <center>
-    <h1> Shelters </h1>
+    <h2> Shelters </h2>
+    <%= link_to "New Shelter", "/shelters/new", style: 'color:#A01C00;', class: 'css_class'  %>
     <% @shelters.each do |shelter| %>
-      <h2><%= shelter.name %></h2><br>
+      <h3>--- <%= link_to shelter.name, "/shelters/#{shelter.id}", style: 'color:#FFFFFF;', class: 'css_class' %> ---</h3><br>
     <%= link_to "See this shelters pets", "/shelters/#{shelter.id}/pets" %><br>
     <% end %>
-    <%= link_to "New Shelter", "/shelters/new"  %>
     </center>
   </body>
 </html>
