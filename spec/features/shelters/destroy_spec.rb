@@ -7,7 +7,7 @@ require "rails_helper"
                                     address: "123 fake st.",
                                     city: "Denver",
                                     state: "CO",
-                                    zip: 80018)
+                                    zip: "80018")
       end
       it "can delete shelter" do
 
