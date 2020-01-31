@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="row">
+  <h1>EDIT SHELTER</h1>
 <%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
   <p><%= label_tag :name %>
   <%= text_field_tag :name %></p>
@@ -11,4 +14,6 @@
   <%= text_field_tag :zip %></p>
     <%= submit_tag 'Update Shelter' %>
 <% end %>
+</div>
+</div>
 
