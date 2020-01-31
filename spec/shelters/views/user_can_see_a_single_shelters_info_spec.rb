@@ -25,7 +25,7 @@ RSpec.describe "shelter show page", type: :feature do
     expect(page).to have_content(shelter_1.state)
     expect(page).to have_content(shelter_1.zip)
     expect(page).to have_link("Edit Shelter")
-    expect(page).to have_button("Delete Shelter")
+    click_button "Delete Shelter"
 
     visit "/shelters/#{shelter_2.id}"
 
@@ -35,6 +35,5 @@ RSpec.describe "shelter show page", type: :feature do
     expect(page).to have_content(shelter_2.state)
     expect(page).to have_content(shelter_2.zip)
     expect(page).to have_link("Edit Shelter")
-    expect(page).to have_button("Delete Shelter")
   end
 end
