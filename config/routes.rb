@@ -11,11 +11,12 @@ Rails.application.routes.draw do
   # patch "/shelters/:id", to: "shelters#update"
   # delete "/shelters/:id", to: "shelters#destroy"
   
-  resources :shelters 
-
-  get "/shelters/:shelter_id/pets", to: "pets#index"
+  resources :shelters do
+    resources :pets, only: [:index, :new, :create] do
+      
+    end
+  end
 
   get "/pets", to: "pets#index"
   get "/pets/:id", to: "pets#show"
-
 end
