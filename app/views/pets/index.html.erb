@@ -1,9 +1,14 @@
+<center>
 <h1>Pets </h1>
+<% if @shelter %>
+<%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new", method: :get %>
+<% end %>
 <% @pets.each do |pet| %>
 <section class="grid-item "id="pet-<%=pet.id%>">
-<%= image_tag(pet.image) %>
+<%= image_tag(pet.image, size: "200x200") %>
 <p>Name: <%= pet.name %></p>
 <p>Age: <%= pet.approximate_age %></p>
 <p>Sex: <%= pet.sex %></p>
 <p>Current Shelter: <%= pet.shelter.name %></p>
 <% end %>
+</center>
