@@ -7,13 +7,13 @@ require "rails_helper"
                                     address: "123 fake st.",
                                     city: "Denver",
                                     state: "CO",
-                                    zip: 80018)
+                                    zip: "80018")
   
         @shelter_2 = Shelter.create(name: "Aurora Shelter",
                                     address: "800 Some Ave",
                                     city: "Aurora",
                                     state: "CO",
-                                    zip: 80249)
+                                    zip: "80249")
       end
       it "can edit a shelter" do
       
