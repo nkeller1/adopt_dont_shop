@@ -9,7 +9,7 @@ RSpec.describe "pets show page", type: :feature do
       state: "PA",
       zip: 17033
     )
-    pet_1 = Pet.create!(
+    pet_3 = Pet.create!(
       image: "https://image.shutterstock.com/image-photo/dog-headshot-on-yellow-background-260nw-324936848.jpg",
       name: "Sammy",
       age: 4,
@@ -18,13 +18,12 @@ RSpec.describe "pets show page", type: :feature do
       shelter: shelter_2
     )
 
-    visit "/pets/#{pet.id}"
+    visit "/pets/#{pet_3.id}"
 
-    expect(page).to have_content(pet_1.image)
-    expect(page).to have_content(pet_1.name)
-    expect(page).to have_content(pet_1.description)
-    expect(page).to have_content(pet_1.age)
-    expect(page).to have_content(pet_1.sex)
-    expect(page).to have_content(pet_1.aboptable)
+    expect(page).to have_css("img[src*='#{pet_3.image}']")
+    expect(page).to have_content(pet_3.name)
+    expect(page).to have_content(pet_3.age)
+    expect(page).to have_content(pet_3.sex)
+    expect(page).to have_content(pet_3.aboptable)
   end
 end
