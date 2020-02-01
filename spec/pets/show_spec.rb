@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "pets show page", type: :feature do
-  it "can see the attributes one one pet" do
+  it "can see the attributes for one pet" do
     shelter_2 = Shelter.create!(
       name: "Meg's Shelter",
       address: "150 Main Street",
@@ -15,6 +15,7 @@ RSpec.describe "pets show page", type: :feature do
       age: 4,
       sex: "Male",
       shelter_name: "Meg's Shelter",
+      adoption_status: "pending",
       shelter: shelter_2
     )
 
@@ -24,6 +25,6 @@ RSpec.describe "pets show page", type: :feature do
     expect(page).to have_content(pet_3.name)
     expect(page).to have_content(pet_3.age)
     expect(page).to have_content(pet_3.sex)
-    expect(page).to have_content(pet_3.aboptable)
+    expect(page).to have_content(pet_3.adoption_status)
   end
 end
