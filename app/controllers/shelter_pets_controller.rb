@@ -15,10 +15,6 @@ class ShelterPetsController < ApplicationController
     redirect_to "/shelters/#{@shelter.id}/pets"
   end
 
-  def update
-
-  end
-
   private
 
     def pet_params

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "shelter_pets edit page", type: :feature do
-  it "can edit an individual pet that belongs to a shelter" do
+RSpec.describe "pets edit page", type: :feature do
+  it "can edit an individual pet" do
     shelter_1 = Shelter.create(
                          name: "Mike's Shelter",
                          address: "1331 17th Street",
@@ -9,8 +9,18 @@ RSpec.describe "shelter_pets edit page", type: :feature do
                          state: "CO",
                          zip: 80202
                        )
-                       
-    visit "/shelters/#{shelter_1.id}/edit"
+
+    pet_1 = Pet.create!(
+                     image: "https://image.shutterstock.com/image-photo/playing-dogs-garden-260nw-1556131820.jpg",
+                     name: "Fido",
+                     description: "Silly",
+                     age: 2,
+                     sex: "Female",
+                     shelter_name: "Mike's Shelter",
+                     shelter: shelter_1
+                   )
+
+    visit "/pets/#{pet_1.id}/edit"
 
     fill_in :image, with: "https://image.shutterstock.com/image-photo/dog-260nw-587562362.jpg"
     fill_in :name, with: "Sally"
@@ -20,7 +30,7 @@ RSpec.describe "shelter_pets edit page", type: :feature do
 
     click_on 'Update Pet'
 
-    expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
+    expect(current_path).to eq("/pets/#{pet_1.id}")
     expect(page).to have_content('Sally')
     expect(page).to have_content('Cuddle Monster')
   end
