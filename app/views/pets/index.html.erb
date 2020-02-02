@@ -3,11 +3,12 @@
 <% @pets.each do |pet| %>
 <p>
   <img src ="<%= pet.image %>" alt="Dog Picture" height="400", width="500"> <br>
-  <%= pet.name %> <br>
-  <%= pet.description %> <br>
-  <%= pet.age %> <br>
-  <%= pet.sex %> <br>
-  <%= pet.shelter_name %> <br><br>
+  Name: <%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %>
+  <br>
+  <%= "Description: #{pet.description}" %> <br>
+  <%= "Age #{pet.age}" %> <br>
+  <%= "Sex: #{pet.sex}" %> <br>
+  <%= "Shelter Name: #{pet.shelter_name}" %> <br><br>
   <%= link_to 'Update Pet', "/pets/#{pet.id}/edit" %>
   <br><br>
   <%= button_to 'Delete Pet', "/pets/#{pet.id}", method: :delete %>
