@@ -24,7 +24,6 @@ RSpec.describe 'shelter pets index page', type: :feature do
       description: "Silly",
       age: 2,
       sex: "Female",
-      shelter_name: "Mike's Shelter",
       shelter: shelter_1
     )
     pet_2 = Pet.create(
@@ -33,7 +32,6 @@ RSpec.describe 'shelter pets index page', type: :feature do
       description: "butthead",
       age: 3,
       sex: "Male",
-      shelter_name: "Mike's Shelter",
       shelter: shelter_1
     )
 
@@ -43,13 +41,12 @@ RSpec.describe 'shelter pets index page', type: :feature do
       description: "Adorable",
       age: 4,
       sex: "Male",
-      shelter_name: "Meg's Shelter",
       shelter: shelter_2
     )
 
     visit "/shelters/#{shelter_1.id}/pets"
 
-    expect(page).to have_content(pet_1.shelter_name)
+    expect(page).to have_content(pet_1.shelter.name)
 
     expect(page).to_not have_content(pet_3.image)
     expect(page).to_not have_content(pet_3.name)
