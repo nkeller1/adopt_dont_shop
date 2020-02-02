@@ -25,7 +25,6 @@ Pet.create!(
   description: "Silly",
   age: 2,
   sex: "Female",
-  shelter_name: "Mike's Shelter",
   adoption_status: "open",
   shelter: shelter_1
 )
@@ -35,7 +34,6 @@ Pet.create!(
   description: "Butthead",
   age: 3,
   sex: "Male",
-  shelter_name: "Mike's Shelter",
   adoption_status: "open",
   shelter: shelter_1
 )
@@ -46,7 +44,6 @@ Pet.create!(
   description: "Adorable",
   age: 4,
   sex: "Male",
-  shelter_name: "Meg's Shelter",
   adoption_status: "pending",
   shelter: shelter_2
 )

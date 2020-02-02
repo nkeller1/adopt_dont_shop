@@ -15,7 +15,6 @@ RSpec.describe "pets show page", type: :feature do
       description: "Adorable",
       age: 4,
       sex: "Male",
-      shelter_name: "Meg's Shelter",
       shelter: shelter_2
     )
 

@@ -16,7 +16,6 @@ RSpec.describe "pet index page", type: :feature do
       description: "Silly",
       age: 2,
       sex: "Female",
-      shelter_name: "Mike's Shelter",
       shelter: shelter_1
     )
     pet_2 = Pet.create(
@@ -25,7 +24,6 @@ RSpec.describe "pet index page", type: :feature do
       description: "butthead",
       age: 3,
       sex: "Male",
-      shelter_name: "Mike's Shelter",
       shelter: shelter_1
     )
 
@@ -36,6 +34,7 @@ RSpec.describe "pet index page", type: :feature do
     expect(page).to have_content(pet_1.description)
     expect(page).to have_content(pet_1.age)
     expect(page).to have_content(pet_1.sex)
-    expect(page).to have_content(pet_1.shelter_name)
+    expect(page).to have_link("Update Pet")
+    expect(page).to have_button("Delete Pet")
   end
 end
