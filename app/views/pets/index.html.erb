@@ -8,7 +8,7 @@
   <%= "Description: #{pet.description}" %> <br>
   <%= "Age #{pet.age}" %> <br>
   <%= "Sex: #{pet.sex}" %> <br>
-  <%= "Shelter Name: #{pet.shelter_name}" %> <br><br>
+  Shelter Name: <%= link_to "#{pet.shelter.name}", "/shelters/#{pet.shelter.id}" %> <br><br>
   <%= link_to 'Update Pet', "/pets/#{pet.id}/edit" %>
   <br><br>
   <%= button_to 'Delete Pet', "/pets/#{pet.id}", method: :delete %>

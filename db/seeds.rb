@@ -25,7 +25,7 @@ Pet.create!(
   description: "Silly",
   age: 2,
   sex: "Female",
-  shelter_name: "Mike's Shelter",
+  shelter_name: shelter_1.name,
   adoption_status: "open",
   shelter: shelter_1
 )
