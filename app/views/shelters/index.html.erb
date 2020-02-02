@@ -12,8 +12,12 @@
     <h2> Shelters </h2>
     <%= link_to "New Shelter", "/shelters/new", style: 'color:#A01C00;', class: 'css_class'  %>
     <% @shelters.each do |shelter| %>
+    <section class="grid-shelter"id="shelter-<%=shelter.id%>">
       <h3>--- <%= link_to shelter.name, "/shelters/#{shelter.id}", style: 'color:#FFFFFF;', class: 'css_class' %> ---</h3><br>
     <%= link_to "See this shelters pets", "/shelters/#{shelter.id}/pets" %><br>
+    <%= link_to "Edit Info", "/shelters/#{shelter.id}/edit" %>
+    <%= link_to "Delete Shelter", "/shelters/#{shelter.id}", method: :delete %>
+    </section>
     <% end %>
     </center>
   </body>
