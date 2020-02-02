@@ -4,5 +4,9 @@ class Shelter < ApplicationRecord
                         :city,
                         :state,
                         :zip
-  has_many :pets
+  has_many :pets, dependent: :destroy
+
+  def count
+    self.pets.count
+  end
 end 
