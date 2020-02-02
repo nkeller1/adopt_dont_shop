@@ -5,7 +5,7 @@
 <br><br>
 <% @shelter.pets.each do |pet| %>
   <img src ="<%= pet.image %>" alt="Dog Picture" style="width:500px;height:400px;"><br> <br>
-  <p>Name: <%= pet.name %></p>
+  Name: <%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %>
   <p>Description: <%= pet.description %></p>
   <p>Age: <%= pet.age %></p>
   <p>Sex: <%= pet.sex %></p>
