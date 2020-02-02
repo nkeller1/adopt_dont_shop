@@ -46,6 +46,15 @@ require "rails_helper"
       expect(page).to have_content(new_shelter.name)
       expect(page).to_not have_content(@shelter_1.name)
     end
+        it "sees a link to edit info" do 
+        visit "/shelters"
+
+        within("#shelter-#{@shelter_1.id}") do
+          click_link "Edit Info"
+
+          expect(current_path).to eq("/shelters/#{@shelter_1.id}/edit")
+        end
+      end
   end
 end
 
