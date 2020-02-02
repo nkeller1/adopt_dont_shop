@@ -2,7 +2,7 @@
   <div class="row">
   <h1>Create Pet</h1>
 <%= form_tag("/shelters/#{@shelter_id}/pets", method: :post) do %>
-  <p><%= label_tag :image %>
+  <p><%= label_tag :image %></p>
   <%= text_field_tag :image %></p>
   <p><%= label_tag :name %>
   <%= text_field_tag :name %></p>
