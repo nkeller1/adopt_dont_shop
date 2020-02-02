@@ -1,6 +1,7 @@
 
 
 header {
+  margin-top: 76px;
   background: #000000;
   display: flex;
 }
@@ -19,6 +20,7 @@ h1 {
   font: 'Palatino';
 }
 h2 {
+  padding-top: 50px;
   font-size: 50px;
   text-shadow: none;
 }
