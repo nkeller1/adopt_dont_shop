@@ -37,7 +37,6 @@ require "rails_helper"
         click_link(@shelter_2.name)
         
         expect(current_path).to eq("/shelters/#{@shelter_2.id}")
-      end
+     end
   end
 end
-
