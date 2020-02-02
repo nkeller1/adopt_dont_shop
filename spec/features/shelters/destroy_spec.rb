@@ -20,5 +20,14 @@ require "rails_helper"
       expect(current_path).to eq("/shelters")
       expect(page).to_not have_content(@shelter_1.name)  
     end 
+    it "sees a link to delete info" do 
+      visit "/shelters"
+
+      within("#shelter-#{@shelter_1.id}") do
+        click_link "Delete"
+      end
+        expect(current_path).to eq("/shelters")
+        expect(page).to_not have_content(@shelter_1.name)
+    end
   end
 end
