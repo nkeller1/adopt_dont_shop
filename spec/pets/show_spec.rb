@@ -27,5 +27,6 @@ RSpec.describe "pets show page", type: :feature do
     expect(page).to have_content(pet_3.age)
     expect(page).to have_content(pet_3.sex)
     expect(page).to have_content(pet_3.adoption_status)
+    click_button "Delete Pet"
   end
 end
