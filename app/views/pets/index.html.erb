@@ -1,14 +1,18 @@
 <center>
-<h1>Pets </h1>
+<h2>Pets </h2>
 <% if @shelter %>
+<p>Number of Pets: <%= @shelter.count %></p><br>
 <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new", method: :get %>
 <% end %>
 <% @pets.each do |pet| %>
-<section class="grid-item "id="pet-<%=pet.id%>">
+<section class="grid-pet "id="pet-<%=pet.id%>">
 <%= image_tag(pet.image, size: "200x200") %>
 <p><%= link_to pet.name, "/pets/#{pet.id}" %></p>
 <p>Age: <%= pet.approximate_age %></p>
 <p>Sex: <%= pet.sex %></p>
 <p>Current Shelter: <%= pet.shelter.name %></p>
+<p><%= link_to 'Edit', "/pets/#{pet.id}/edit" %></p>
+<p><%= link_to 'Delete Pet', "/pets/#{pet.id}", method: :delete %></p> 
+</section>
 <% end %>
 </center>
