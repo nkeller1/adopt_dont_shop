@@ -1,11 +1,13 @@
 <div class="container">
 <center>
 <h1>Pet Info</h1>
-<%= image_tag(@pet.image) %>
-<h2>Name: <%= @pet.name %><h2>
+<%= image_tag(@pet.image, size: "400x400") %>
+<p>Name: <%= link_to @pet.name, "/pets/#{@pet.id}" %></p>
 <p>Description: <%= @pet.description %></p>
 <p>Age: <%= @pet.approximate_age %></p>
 <p>Sex: <%= @pet.sex %></p>
 <p>Status: <%= @pet.adoptable %></p>
+<p><%= link_to 'Edit', "/pets/#{@pet.id}/edit" %></p>
+<p><%= link_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %></p> 
 </div>
 </center>
