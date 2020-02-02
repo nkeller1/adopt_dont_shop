@@ -7,3 +7,5 @@
 <h3>Adoption Status: <%= @pet.adoption_status %> </h3>
 
 <%= link_to 'Update Pet', "/pets/#{@pet.id}/edit" %>
+<br><br><br>
+<%= button_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %>
