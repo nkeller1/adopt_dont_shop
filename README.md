@@ -1,3 +1,7 @@
+Our README Portion:
+
+DTR Gist: https://gist.github.com/nkeller1/262c40054e93c83966301d576bf09112
+
 # Adopt Don't Shop
 BE Mod 2 Week 1 Solo Project
 
